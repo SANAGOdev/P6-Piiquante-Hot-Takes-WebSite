@@ -26,7 +26,7 @@ exports.login = (req, res, next) => {
   User.findOne({ email: req.body.email }) //récupération de l'email utilisateur
     .then((user) => {
       if (!user) {
-        res.status('401').json({ message: 'User not exist' }); //renvoie une erreur dans le cas échéant
+        res.status(401).json({ message: 'User not exist' }); //renvoie une erreur dans le cas échéant
         return;
       }
 
