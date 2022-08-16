@@ -9,7 +9,7 @@ const User = require('../models/user'); //import du model User
 exports.signup = (req, res, next) => {
   //chiffrage du mot de passe
   bcrypt
-    .hash(req.body.password, 10) //10 tours de chiffrage
+    .hash(req.body.password, 12) //12 tours de chiffrage
     .then((hash) => {
       const user = new User({ email: req.body.email, password: hash }); //récupération de l'email/mot de passe utilisateur
 
