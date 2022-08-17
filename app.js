@@ -45,8 +45,7 @@ app.listen(port, () => {
   //connection à la base de donnée
   mongoose
     .connect(
-      `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@p6-api-sauce.hbnnstp.mongodb.net/myFirstDatabase`,
-      { useNewUrlParser: true, useUnifiedTopology: true }
+      `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@p6-api-sauce.hbnnstp.mongodb.net/myFirstDatabase`
     )
     .then(() => console.log('MongoDB connected!!'))
     .catch((err) => console.log('Failed to connect to MongoDB', err));
